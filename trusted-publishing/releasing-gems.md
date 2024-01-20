@@ -30,4 +30,4 @@ jobs:
       - uses: rubygems/release-gem@v1
 ```
 
-Note the `id-token: write`` permission: you **must** provide this permission at either the job level (strongly recommended) or workflow level (discouraged). Without it, the publishing action won't have sufficient permissions to identify itself to RubyGems.org.
+Note the `id-token: write` permission: you **must** provide this permission at either the job level (strongly recommended) or workflow level (discouraged). Without it, the publishing action won't have sufficient permissions to identify itself to RubyGems.org.
