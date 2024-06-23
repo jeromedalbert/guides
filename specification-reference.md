@@ -64,6 +64,8 @@ next: /command-reference
     
 ## Optional gemspec attributes
     
+* [add_dependency](#add_dependency)
+    
 * [add_development_dependency](#add_development_dependency)
     
 * [add_runtime_dependency](#add_runtime_dependency)
@@ -324,6 +326,13 @@ next: /command-reference
 # Optional gemspec attributes
 
 
+<a id="add_dependency"> </a>
+
+## add_dependency(`gem`, `*requirements`)
+
+
+Alias for: [add_runtime_dependency](#add_runtime_dependency)
+
 <a id="add_development_dependency"> </a>
 
 ## add_development_dependency(`gem`, `*requirements`)
@@ -347,6 +356,7 @@ next: /command-reference
 
 <pre class="ruby"><span class="ruby-identifier">spec</span>.<span class="ruby-identifier">add_runtime_dependency</span> <span class="ruby-string">&#39;example&#39;</span>, <span class="ruby-string">&#39;~&gt; 1.1&#39;</span>, <span class="ruby-string">&#39;&gt;= 1.1.4&#39;</span>
 </pre>
+Also aliased as: [add_dependency](#add_dependency)
 
 <a id="author="> </a>
 

@@ -28,6 +28,7 @@ next: /command-reference
       visibilities.each do |visibility, methods|
         methods.each do |method|
           all_methods[section][method.name] = method
+          method.aliases.each { |aka| all_methods[section][aka.name] = aka }
         end
       end
     end
@@ -67,6 +68,11 @@ next: /command-reference
    description.gsub! %r%<a\shref=(["'])Specification\.html\1>Specification</a>%,
                      'Specification' %>
 <%= description %>
+<% if method.aliases.any? -%>
+Also aliased as: <%= method.aliases.map { |aka| "[#{aka.name}](##{aka.name})" }.join ", " %>
+<% elsif method.is_alias_for -%>
+Alias for: [<%= method.is_alias_for.name %>](#<%= method.is_alias_for.name %>)
+<% end -%>
 <% end -%>
 <% end -%>
 
